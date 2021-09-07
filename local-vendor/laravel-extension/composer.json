@@ -1,0 +1,37 @@
+{
+  "name": "pterobilling/laravel-extension",
+  "description": "Laravel Extension Pack",
+  "type": "framework-extension",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "Laravel",
+    "Laravel 8",
+    "addon",
+    "migration",
+    "architecture",
+    "facade"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pterobilling\\LaraExtension\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pterobilling\\LaraExtension\\ServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "require": {
+    "php": "^8",
+    "laravel/framework": "^8",
+    "pterobilling/laravel-addomipot": "^1",
+    "pterobilling/laravel-versonia": "^1"
+  }
+}

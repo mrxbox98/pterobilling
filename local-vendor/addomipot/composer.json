@@ -1,0 +1,43 @@
+{
+  "name": "pterobilling/laravel-addomipot",
+  "description": "Addon system for Laravel.",
+  "type": "framework-extension",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "Laravel",
+    "Laravel 8",
+    "module",
+    "addon",
+    "sub application",
+    "facade"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pterobilling\\LaraAddomnipot\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pterobilling\\LaraAddomnipot\\ServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "require": {
+    "php": "^8",
+    "illuminate/console": "^8",
+    "illuminate/container": "^8",
+    "illuminate/contracts": "^8",
+    "illuminate/events": "^8",
+    "illuminate/filesystem": "^8",
+    "illuminate/support": "^8"
+  },
+  "require-dev": {
+    "illuminate/config": "^8"
+  }
+}

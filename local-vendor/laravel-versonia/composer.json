@@ -1,0 +1,36 @@
+{
+  "name": "pterobilling/laravel-versonia",
+  "description": "Version based database migration system for Laravel 8",
+  "type": "framework-extension",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "Laravel",
+    "Laravel 5",
+    "databaes",
+    "migration"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pterobilling\\LaraVersionia\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8",
+    "illuminate/console": "^8",
+    "illuminate/container": "^8",
+    "illuminate/contracts": "^8",
+    "illuminate/database": "^8",
+    "illuminate/support": "^8",
+    "pterobilling/laravel-source-generator": "^1"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pterobilling\\LaraVersionia\\ServiceProvider"
+      ],
+      "aliases": {}
+    }
+  }
+}

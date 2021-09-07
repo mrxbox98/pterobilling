@@ -1,0 +1,26 @@
+{
+  "name": "pterobilling/laravel-source-generator",
+  "description": "PHP source code generator. Can be written using a method chain.",
+  "type": "library",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "php",
+    "source",
+    "code",
+    "generator"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pterobilling\\LaraSourceGenerator\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8",
+    "illuminate/console": "^8",
+    "illuminate/support": "^8",
+    "pterobilling/source-generator": "^1.0"
+  },
+  "prefer-stable": true
+}

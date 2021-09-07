@@ -1,0 +1,24 @@
+{
+  "name": "pterobilling/source-generator",
+  "type": "library",
+  "description": "PHP source code generator. Can be written using a method chain.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "php",
+    "source",
+    "code",
+    "generator"
+  ],
+  "require": {
+    "php": "^8",
+    "league/flysystem": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pterobilling\\Generators\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
