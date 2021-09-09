@@ -1,5 +1,8 @@
 const stripe = require('stripe')('sk_test_51JIOoHCGRmSKq6LqDnK5KcIqCDRPQ8WFmuNsk5gpTaStYSQBwoujfqg9FN3EbH7ntZ2JmBwHlgLTehvxaleiSUSV00ePc7MG0k');
 
+export default createCustomer; createSubscription; cancelSubscription; listSubscriptions;
+
+
 /**
  * Creates a new customer
  * @param email The email to use with the customer
@@ -39,4 +42,28 @@ async function cancelSubscription(subscription:string)
     );
 
     return deleted
+}
+
+/**
+ * Lists all subscriptions
+ * @returns All subscriptions
+ */
+async function listSubscriptions()
+{
+    const subscriptions = await stripe.subscriptions.list({});
+    return subscriptions
+}
+
+/**
+ * Check if a subscription exists
+ * @param subscriptionID The subscription id
+ * @returns true if the subscription exists; false otherwise
+ */
+async function checkSubscription(subscriptionID:string)
+{
+    const subscription = await stripe.subscriptions.retrieve(
+        subscriptionID
+    );
+
+    return subscription==null;
 }
