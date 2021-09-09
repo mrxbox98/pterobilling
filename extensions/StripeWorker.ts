@@ -23,5 +23,20 @@ async function createSubscription(customer:string, itemPrice:string) {
         items: [
           {price: itemPrice},
         ],
-      });
+    });
+    return subscription
+}
+
+/**
+ * Deletes a subscription
+ * @param subscription The subscription to cancel
+ * @returns the deleted subscription
+ */
+async function cancelSubscription(subscription:string)
+{
+    const deleted = await stripe.subscriptions.del(
+        subscription
+    );
+
+    return deleted
 }
